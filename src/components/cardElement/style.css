@@ -1,0 +1,17 @@
+.product{
+    height: 500px;
+    width: 300px;
+    margin: 16px;
+    padding: 24px;
+    background-color: crimson;
+    color:mintcream;
+    border-radius: 12px;
+}
+
+.product *{
+    margin-bottom: 8px;
+}
+
+.product-color{
+    list-style: none;
+}
