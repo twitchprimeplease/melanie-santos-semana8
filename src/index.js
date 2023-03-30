@@ -21,14 +21,12 @@ fetch('https://apimocha.com/json-logitech-s8/all-products')
 
 function organiceData(array){
     array.forEach(product => {
-        console.log(product.name);
         const productObj = document.createElement('card-element');
-        console.log(productObj);
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
         productObj.setAttribute('price', product.price);
         productObj.setAttribute('image', product.url[0]);
-        console.log(productContainer)
+        productObj.setAttribute('type', product.type);
         productContainer.append(productObj);
         
     });

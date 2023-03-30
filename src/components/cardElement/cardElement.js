@@ -5,6 +5,7 @@ class cardElement extends HTMLElement {
         this.description = this.getAttribute('description');
         this.price = this.getAttribute('price');	
         this.image = this.getAttribute('image');
+        this.type = this.getAttribute('type');
     }
 
     connectedCallback(){
@@ -12,7 +13,7 @@ class cardElement extends HTMLElement {
     }
 
     static get observedAttributes(){
-        return ['name', 'description', 'image', 'price']
+        return ['name', 'description', 'image', 'price','type']
     }
     
     attributeChangedCallback(propName, oldvalue, newValue){
@@ -25,10 +26,16 @@ class cardElement extends HTMLElement {
         this.innerHTML = `
         <link rel="stylesheet" href="/src/components/cardElement/style.css">
             <article class="product">
-                <h3 class ="product-name">${this.name}</h3>
-                <p class="product-description">${this.description}</p>
-                <img class= "product-img" src= ${this.image} alt="">
-                <h3>${this.price}</h3>
+                <div class = "product-info">
+                    <h3 class ="product-name">${this.name}</h3>
+                    <p class="product-description">${this.description}</p>
+                    <h5 class="product-type">${this.type}</h5>
+                    <h4>${this.price}</h4>
+                    <button>Read More</button>
+                </div>
+                <div class="image-container">
+                    <img class= "product-img" src= ${this.image} alt="">
+                </div>
             </article>
         `
     }

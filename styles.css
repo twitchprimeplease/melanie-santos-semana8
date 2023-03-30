@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 main{
@@ -13,7 +14,8 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 1200px;
-    background-color: plum;
+    width: 100%;
+    background-color: rgb( 166, 103, 27);
+    justify-content: center;
 }
 
